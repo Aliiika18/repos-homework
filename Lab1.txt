@@ -1,3 +1,5 @@
+
+//Измененный файл
 using System.Net.Sockets;
 using System.Net;
 using System.Text;
@@ -6,7 +8,7 @@ const int BUFFER_SIZE = 1_024;
 int port = 8282;
 TcpListener server = new(IPAddress.Any, port);
 server.Start();
-Console.WriteLine("Сервер запущен. Ожидание подключений...");
+Console.WriteLine("The server is running! Connection is expected...");
 try
 {
     while (true)
@@ -17,7 +19,7 @@ try
 }
 catch (SocketException)
 {
-    Console.WriteLine("Ошибка!");
+    Console.WriteLine("Error!");
 }
 static async Task HandleClientAsync(TcpClient client)
 {    
